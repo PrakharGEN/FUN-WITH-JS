@@ -1,0 +1,39 @@
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    padding:0;
+
+}
+.inputs,.wrapper{
+    width: 45%;
+    height:auto;
+    float:left;
+    margin: 1em;
+}
+.wrapper{
+    text-align: center;
+}
+input{
+    display: table;
+    margin-bottom:1em;
+    width:60%;
+    font-size:16px;
+    border:2px solid #78a0f1;
+    border-radius: 5px;
+    padding:3px;
+}
+#file{
+    width:0.1px;
+    height:0.1px;
+    opacity:0;
+}
+.upload,button{
+    color:#fff;
+    background:#78a0f1;
+    padding: 5px;
+    border: 2px solid #78a0f1;
+    border-radius:5px;
+    font-size:20px;
+    cursor:pointer;
+
+}
