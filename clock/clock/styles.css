@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --second-hand-background-color: red;
+  --minute-hand-background-color: black;
+  --hour-hand-background-color: black;
+  --clock-size: 70vmin;
+  --clock-hand-height: 1%;
+  --clock-hand-width: 45%;
+  --background-color: white;
+  --foreground-color: black;
+  --clock-background-color: white;
+  --center-knob-size: 5%;
+  --center-knob-color: black;
+  --clock-bar-color: black;
+  --clock-bar-height: 1%;
+  --clock-bar-width: 5%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1c1c1c;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+.clock {
+  width: var(--clock-size);
+  height: var(--clock-size);
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--clock-background-color);
+  background-image: url('https://freepngimg.com/download/oval/87492-numerals-art-point-clock-face-roman-line.png'),
+    url('https://images.unsplash.com/photo-1541450805268-4822a3a774ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4), 8px 8px 24px rgba(0, 0, 0, 0.2),
+    16px 16px 56px rgba(0, 0, 0, 0.1);
+}
+
+.hand {
+  position: absolute;
+  height: var(--clock-hand-height);
+  width: var(--clock-hand-width);
+  top: 50%;
+  right: 50%;
+  transform-origin: right;
+  border-radius: 10px;
+}
+
+.hand-sec {
+  background-color: var(--second-hand-background-color);
+}
+.hand-min {
+  width: 30%;
+  background-color: var(--minute-hand-background-color);
+}
+.hand-hour {
+  background-color: var(--hour-hand-background-color);
+  width: 20%;
+}
+
+.center-knob {
+  position: absolute;
+  width: var(--center-knob-size);
+  height: var(--center-knob-size);
+  background-color: var(--center-knob-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
